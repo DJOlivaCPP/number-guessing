@@ -45,7 +45,7 @@ int main(){
             }
 
             if(guess == target){
-                printf("Correct Guess!");
+                printf("Correct Guess!\n");
                 found++;
             } else if (guess > target) {
                 printf("Your guess is larger then the correct amount\n");
