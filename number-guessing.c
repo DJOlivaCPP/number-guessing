@@ -9,6 +9,12 @@
 
 //3 - to exit the program
 
+#include <stdio.h>  
+#include <stdlib.h>
+#include <time.h>
+
+time_t t;
+
 int main(){
     int exit = 0;
     int MAX_VAL = 10;
@@ -23,7 +29,7 @@ int main(){
         getChar();
 
         int found = 0;
-        int target = srand() % MAX_VAL + 1;
+        int target = srand((unsigned) time (&t)) % MAX_VAL + 1;
         while (option == '1' && found == 0)
         {
             char cGuess;
