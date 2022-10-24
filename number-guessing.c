@@ -39,9 +39,9 @@ int main(){
 
             if(guess == target){
                 printf("Correct Guess!");
-            } else (guess > target) {
+            } else if (guess > target) {
                 printf("Your guess is larger then the correct amount\n");
-            } else (guess < target) {
+            } else if (guess < target) {
                 printf("Your guess is smaller then the correct amount\n");
             }
         }
