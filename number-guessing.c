@@ -25,8 +25,8 @@ int main(){
         printf("1 - Play the game\n");
         printf("2 - Change the max number\n");
         printf("3 - Exit");
-        option = getChar();
-        getChar();
+        option = getchar();
+        getchar();
 
         int found = 0;
         int target = srand((unsigned) time (&t)) % MAX_VAL + 1;
@@ -35,9 +35,9 @@ int main(){
             char cGuess;
             int guess;
             printf("Enter a guess\n");
-            cGuess = getChar();
-            getChar();
-            guess = atof(cGuess);
+            cGuess = getchar();
+            getchar();
+            guess = atoi(cGuess);
 
             if(cGuess == 'q'){
                 break;
@@ -45,6 +45,7 @@ int main(){
 
             if(guess == target){
                 printf("Correct Guess!");
+                found++;
             } else if (guess > target) {
                 printf("Your guess is larger then the correct amount\n");
             } else if (guess < target) {
@@ -55,9 +56,9 @@ int main(){
         if(option == '2'){
             char temp;
             printf("What would you like the max value to be\n");
-            temp = getChar();
-            getChar();
-            MAX_VAL = atof(temp);
+            temp = getchar();
+            getchar();
+            MAX_VAL = atoi(temp);
         }
 
         if(option == '3'){
