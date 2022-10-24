@@ -24,7 +24,7 @@ int main(){
         printf("Choose an option 1 to 3: \n");
         printf("1 - Play the game\n");
         printf("2 - Change the max number\n");
-        printf("3 - Exit");
+        printf("3 - Exit\n");
         option = getchar();
         getchar();
 
@@ -38,7 +38,7 @@ int main(){
             printf("Enter a guess\n");
             cGuess = getchar();
             getchar();
-            guess = atof(cGuess);
+            guess = atoi(&cGuess);
 
             if(cGuess == 'q'){
                 break;
@@ -59,7 +59,7 @@ int main(){
             printf("What would you like the max value to be\n");
             temp = getchar();
             getchar();
-            MAX_VAL = atof(temp);
+            MAX_VAL = atoi(&temp);
         }
 
         if(option == '3'){
