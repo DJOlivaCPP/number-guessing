@@ -22,9 +22,28 @@ int main(){
         option = getChar();
         getChar();
 
-        while (option == '1')
+        int found = 0;
+        int target = srand() % MAX_VAL + 1;
+        while (option == '1' && found == 0)
         {
-            
+            char cGuess;
+            int guess;
+            printf("Enter a guess\n");
+            cGuess = getChar();
+            getChar();
+            guess = atof(cGuess);
+
+            if(cGuess == 'q'){
+                break;
+            }
+
+            if(guess == target){
+                printf("Correct Guess!");
+            } else (guess > target) {
+                printf("Your guess is larger then the correct amount\n");
+            } else (guess < target) {
+                printf("Your guess is smaller then the correct amount\n");
+            }
         }
         
         if(option == '2'){
@@ -39,4 +58,6 @@ int main(){
             exit = option;
         }
     }
+
+    return 0;
 }
